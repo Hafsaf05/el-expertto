@@ -16,7 +16,13 @@ export default defineConfig({
     }),
     viteReact(),
     tailwindcss(),
-    nitro(),
+    nitro({
+      output: {
+        dir: "dist",
+        publicDir: "dist/client",
+        serverDir: "dist/server",
+      },
+    }),
     netlify(),
   ],
 });
