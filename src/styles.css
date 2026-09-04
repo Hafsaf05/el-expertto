@@ -156,3 +156,53 @@
     "opsz" 24;
   line-height: 1;
 }
+
+/* ─── Animation keyframes ─────────────────────────────────── */
+
+@keyframes cursor-blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px);   }
+  50%       { transform: translateY(-7px);  }
+}
+
+@keyframes glow-ambient {
+  0%, 100% { opacity: 0.10; }
+  50%       { opacity: 0.22; }
+}
+
+@keyframes live-pulse {
+  0%, 100% { opacity: 1;    transform: scale(1);    }
+  50%       { opacity: 0.55; transform: scale(1.35); }
+}
+
+.animate-cursor-blink {
+  display: inline-block;
+  animation: cursor-blink 0.9s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-glow-ambient {
+  animation: glow-ambient 8s ease-in-out infinite;
+}
+
+.animate-live-pulse {
+  animation: live-pulse 2s ease-in-out infinite;
+}
+
+/* ─── Reduced-motion: strip all animations ────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

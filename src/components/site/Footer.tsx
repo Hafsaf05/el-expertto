@@ -89,10 +89,10 @@ export function Footer() {
                 Email
               </div>
               <a
-                href="mailto:elexperttto@gmail.com"
+                href="mailto:contact@elexperto.com"
                 className="break-all text-foreground/85 hover:text-primary-tint"
               >
-                elexperttto@gmail.com
+                contact@elexperto.com
               </a>
             </li>
           </ul>
