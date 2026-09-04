@@ -118,7 +118,7 @@ export const Route =
           rel: "stylesheet",
           href: "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap",
         },
-        { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+        { rel: "icon", href: "/favicon.svg", type: "image/svg+xml" },
       ],
     }),
     shellComponent: RootShell,
